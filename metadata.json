@@ -1,0 +1,5 @@
+{
+  "name": "HomeVista Remodeler",
+  "description": "An AI-powered tool to visualize home renovations. Upload an image of your house or a room, describe the changes you want, and let our AI generate a photorealistic remodeled version.",
+  "requestFramePermissions": []
+}
