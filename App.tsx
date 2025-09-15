@@ -1,4 +1,3 @@
-
 import React, { useState, useCallback } from 'react';
 import Header from './components/Header';
 import ImageUploader from './components/ImageUploader';
@@ -56,13 +55,13 @@ function App() {
   const isReadyToGenerate = !!originalImageFile && modificationText.trim().length > 0;
 
   return (
-    <div className="min-h-screen bg-gray-900 text-gray-100 font-sans">
+    <div className="min-h-screen bg-slate-900 text-slate-200 font-sans">
       {isLoading && <Loader />}
       <Header />
       <main className="container mx-auto px-4 py-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16">
           {/* Controls Column */}
-          <div className="flex flex-col space-y-6">
+          <div className="flex flex-col space-y-8">
             <ImageUploader 
               onImageUpload={handleImageUpload} 
               imagePreviewUrl={originalImageBase64}
@@ -81,7 +80,7 @@ function App() {
           {/* Results Column */}
           <div className="flex flex-col">
             {error && (
-                <div className="bg-red-900/50 border border-red-700 text-red-300 px-4 py-3 rounded-lg mb-4" role="alert">
+                <div className="bg-red-500/10 border border-red-500/30 text-red-400 px-4 py-3 rounded-xl mb-4" role="alert">
                     <strong className="font-bold">Error: </strong>
                     <span className="block sm:inline">{error}</span>
                 </div>
@@ -93,7 +92,7 @@ function App() {
           </div>
         </div>
       </main>
-      <footer className="text-center py-6 text-gray-500 text-sm">
+      <footer className="text-center py-6 text-slate-500 text-sm">
         <p>Powered by Gemini. Visualizations are AI-generated and may not be perfectly accurate.</p>
       </footer>
     </div>

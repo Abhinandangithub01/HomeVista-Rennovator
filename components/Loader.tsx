@@ -31,9 +31,9 @@ const Loader: React.FC = () => {
     }, []);
 
     return (
-        <div className={`fixed inset-0 bg-gray-900/80 backdrop-blur-sm flex flex-col items-center justify-center z-50 transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-            <div className="w-20 h-20 border-4 border-t-purple-500 border-r-purple-500 border-b-transparent border-l-transparent rounded-full animate-spin"></div>
-            <p className="text-white text-lg mt-6 font-medium transition-opacity duration-500">{message}</p>
+        <div className={`fixed inset-0 bg-slate-900/80 backdrop-blur-md flex flex-col items-center justify-center z-50 transition-opacity duration-500 ease-in-out ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+            <div className="w-20 h-20 border-4 border-t-indigo-500 border-r-indigo-500 border-b-transparent border-l-transparent rounded-full animate-spin"></div>
+            <p className="text-slate-200 text-lg mt-6 font-medium transition-opacity duration-500">{message}</p>
         </div>
     );
 };

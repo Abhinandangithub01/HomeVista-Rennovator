@@ -42,8 +42,8 @@ const ImagePanel: React.FC<ImagePanelProps> = ({ imageUrl, title, isPlaceholder 
     
     return (
       <div className="w-full">
-        <h3 className="text-lg font-semibold text-center mb-3 text-gray-400">{title}</h3>
-        <div className="group aspect-square bg-gray-800/50 rounded-xl border border-gray-700 flex items-center justify-center overflow-hidden shadow-inner relative">
+        <h3 className="text-lg font-semibold text-center mb-3 text-slate-400">{title}</h3>
+        <div className="group aspect-square bg-slate-800/50 rounded-2xl border border-slate-700 flex items-center justify-center overflow-hidden shadow-inner relative">
           {imageUrl ? (
             <>
               <img 
@@ -54,7 +54,7 @@ const ImagePanel: React.FC<ImagePanelProps> = ({ imageUrl, title, isPlaceholder 
               {isDownloadable && isImageVisible && (
                  <button 
                     onClick={handleDownload} 
-                    className="absolute top-3 right-3 p-2 bg-gray-900/50 rounded-full text-gray-300 hover:text-white hover:bg-gray-900/80 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
+                    className="absolute top-3 right-3 p-2 bg-slate-900/50 backdrop-blur-sm rounded-full text-slate-300 hover:text-white hover:bg-slate-900/80 transition-all opacity-0 group-hover:opacity-100 focus:opacity-100"
                     aria-label="Download remodeled image"
                 >
                    <DownloadIcon />
@@ -62,7 +62,7 @@ const ImagePanel: React.FC<ImagePanelProps> = ({ imageUrl, title, isPlaceholder 
               )}
             </>
           ) : (
-            <div className="text-center text-gray-500 p-4">
+            <div className="text-center text-slate-500 p-4">
               <svg xmlns="http://www.w3.org/2000/svg" className="mx-auto h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
               </svg>
